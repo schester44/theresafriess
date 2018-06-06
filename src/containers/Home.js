@@ -3,6 +3,8 @@ import React from "react"
 import Image from "../components/Image"
 
 const Home = ({ images }) => {
+	window.images = images
+	console.log('[Home]', images);
 	return (
 		<div
 			style={{
@@ -13,7 +15,8 @@ const Home = ({ images }) => {
 				justifyContent: "center"
 			}}
 		>
-			{images.map((image, index) => <Image image={image} key={index} />)}
+		{JSON.stringify(images)}	
+			{images.map((image, index) => <Image image={image} iKey={index} key={index} />)}
 		</div>
 	)
 }
