@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Route } from "react-router-dom"
 
-import Image from "../components/Image"
+import Image from "./components/Image"
 import images from "./images.js"
 
 class App extends Component {
@@ -23,7 +23,6 @@ class App extends Component {
 							justifyContent: "center"
 						}}
 					>
-						{JSON.stringify(images)}
 						{images.map((image, index) => <Image image={image} iKey={index} key={index} />)}
 					</div>
 				</div>
